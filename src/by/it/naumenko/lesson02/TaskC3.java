@@ -1,5 +1,8 @@
 package by.it.naumenko.lesson02;
 
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
 /*
 Ускорение свободного падения на Земле и Марсе таково:
 Марс   3.86
@@ -30,5 +33,23 @@ package by.it.naumenko.lesson02;
 
 */
 class TaskC3 {
+    static  double getWeight(int weight) {
+        //DecimalFormat df = new DecimalFormat("#.##");
+        //System.out.println("Коэффициент = " + k);
+        double ves = Math.round((weight/(9.81/3.86))*100);
+        return ves/100;
+    }
+
+    public static void main(String[] args) {
+        Scanner vvod = new Scanner(System.in);
+        System.out.println("введите вес");
+        int m = vvod.nextInt();
+        //String s = String.format("%.2f", mm);
+        //System.out.print("Вес на Марсе = "+mm);
+        //        //System.out.printf("%.2f",getWeight(m));
+        System.out.println(getWeight(m));
+
+    }
+
 
 }
