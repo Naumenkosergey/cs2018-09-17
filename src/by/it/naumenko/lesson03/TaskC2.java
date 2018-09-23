@@ -24,16 +24,38 @@ import java.util.Scanner;
 */
 public class TaskC2 {
 
+    public static int sumDigitsInNumber(int a) {
+
+       /* int t = a / 1000;
+        int s = (a % 1000) / 100;
+        int d = (a % 1000) % 100 / 10;
+        int e = ((a % 1000) % 100) % 10;
+        int number = t + s + d + e;*/
+       /* int sum = 0;
+        while (a > 10) {
+            sum += a % 10;
+            a /= 10;
+        }
+        sum += a;*/
+       int sum = a%10;
+       if (a>10)
+           sum+=sumDigitsInNumber(a/10);
+        return sum;
+    }
 
 
+    public static void main(String[] args) {
 
-   public static void main(String[] args) {
-//        System.out.println(sumDigitsInNumber(5467));
-       Scanner cs = new Scanner(System.in);
-       int a=cs.nextInt();
-       int t=a/1000;
+        //Scanner cs = new Scanner(System.in);
+        // int a=cs.nextInt();
+      /* int t=a/1000;
        int s = (a%1000)/100;
-       int d= (a/100)%10;
+       int d= (a%1000)%100/10;
+       int e= ((a%1000)%100)%10;
+       System.out.println(t+" "+s+" "+d+" "+e);
+       System.out.println(t+s+d+e);*/
+        System.out.println(sumDigitsInNumber(5467));
+
     }
 
 }

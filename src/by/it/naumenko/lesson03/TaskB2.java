@@ -48,7 +48,6 @@ class TaskB2 {
         int b = cs.nextInt();
         System.out.println("Введите значение c");
         int c = cs.nextInt();
-        //double d = des(a,b,c);
         if(des(a,b,c)>0){
             double x1=((-b+Math.sqrt(des(a,b,c)))/(2*a));
             double x2=((-b-Math.sqrt(des(a,b,c)))/(2*a));
