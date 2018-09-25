@@ -1,5 +1,7 @@
 package by.it.naumenko.lesson04;
 
+import java.util.Scanner;
+
 /*
 Напишите программу которая спрашивает у пользователя:
 Какую вы хотите зарплату в $$$?
@@ -37,6 +39,73 @@ package by.it.naumenko.lesson04;
 
 */
 public class TaskC1 {
+    public static void main(String[] args) {
+        System.out.println("Какую вы хотите зарплату в $$$?");
+        Scanner sc = new Scanner(System.in);
+        int zp = sc.nextInt();
+        if (zp < 300 || zp > 3000) {
+            System.out.println("Мы вам перезвоним!");
+        } else {
+            for (int mounth = 0; mounth <= 14; mounth++) {
+                if (mounth != 0 && mounth != 13 && mounth != 14) {
+                    if (mounth < 6 || mounth > 8) {
+                        switch (mounth) {
+                            case 1:
+                                System.out.println("За январь начислено $" + zp * 1.5);
+                                break;
+                            case 2:
+                                System.out.println("За февраль начислено $" + zp * 1.5);
+                                break;
+                            case 3:
+                                System.out.println("За март начислено $" + zp * 1.5);
+                                break;
+                            case 4:
+                                System.out.println("За апрель начислено $" + zp * 1.5);
+                                break;
+                            case 5:
+                                System.out.println("За май начислено $" + zp * 1.5);
+                                break;
+                            case 9:
+                                System.out.println("За сентябрь начислено $" + zp * 1.5);
+                                break;
+                            case 10:
+                                System.out.println("За октябрь начислено $" + zp * 1.5);
+                                break;
+                            case 11:
+                                System.out.println("За ноябрь начислено $" + zp * 1.5);
+                                break;
+                            case 12:
+                                System.out.println("За декабрь начислено $" + zp * 1.5);
+                                break;
+                        }
+                        if (zp * 1.5 == 666.0) {
+                            //System.out.println("Уволен в месяце № " + (mounth + 1));
+                            break;
+                        }
+                    } else {
+                        //System.out.println("За месяц " + mounth + "начислено $"+zp);
+                        switch (mounth) {
+                            case 6:
+                                System.out.println("За июнь начислено $" + zp);
+                                break;
+                            case 7:
+                                System.out.println("За июль начислено $" + zp);
+                                break;
+                            case 8:
+                                System.out.println("За август начислено $" + zp);
+                                break;
+                        }
+                        if (zp == 666) {
+                            //System.out.println("Уволен в месяце № " + (mounth + 1));
+                            break;
+                        }
+                    }
+                } else {
+                    System.out.println("За месяц 0 " + mounth + "  начислено $0.0");
+                }
+            }
+        }
 
 
+    }
 }

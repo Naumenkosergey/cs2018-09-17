@@ -30,17 +30,17 @@ public class TaskB2 {
         Scanner cs = new Scanner(System.in);
         int size = cs.nextInt();
         int i = 1;
-        while (i<=size){
-            System.out.print((i * size)/10+ " ");
-            i++;
+        int j = 1;
+        int count = 1;
+        while (count <= size * size) {
+            System.out.print(i * j + " ");
+            if (count % size == 0) {
+                i = count / size + 1;
+                j = 0;
+                System.out.println();
+            }
+            j++;
+            count++;
         }
-
-//        for (int i = 1; i <= size; i++) {
-//            for (int j = 1; j <= size; j++) {
-//                System.out.print(i * j + " ");
-//            }
-//            System.out.println();
-//        }
     }
-
 }
