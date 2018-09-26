@@ -86,13 +86,13 @@ public class TaskC1 {
                         //System.out.println("За месяц " + mounth + "начислено $"+zp);
                         switch (mounth) {
                             case 6:
-                                System.out.println("За июнь начислено $" + zp);
+                                System.out.println("За июнь начислено $" + (double)zp);
                                 break;
                             case 7:
-                                System.out.println("За июль начислено $" + zp);
+                                System.out.println("За июль начислено $" + (double)zp);
                                 break;
                             case 8:
-                                System.out.println("За август начислено $" + zp);
+                                System.out.println("За август начислено $" + (double)zp);
                                 break;
                         }
                         if (zp == 666) {
@@ -101,11 +101,9 @@ public class TaskC1 {
                         }
                     }
                 } else {
-                    System.out.println("За месяц " + mounth + " начислено $0.0");
+                    System.out.println("За месяц " + Integer.toString(mounth) + " начислено $0.0");
                 }
             }
         }
-
-
     }
 }
