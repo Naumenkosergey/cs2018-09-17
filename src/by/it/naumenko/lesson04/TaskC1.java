@@ -101,7 +101,7 @@ public class TaskC1 {
                         }
                     }
                 } else {
-                    System.out.println("За месяц 0 " + mounth + "  начислено $0.0");
+                    System.out.println("За месяц " + mounth + " начислено $0.0");
                 }
             }
         }
