@@ -16,10 +16,15 @@ import java.util.Scanner;
 public class TaskB1 { 
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < 5; i++) {
-            list.add(sc.next());
-        }
+        list.add("элемент 1");
+        list.add("элемент 2");
+        list.add("элемент 3");
+        list.add("элемент 4");
+        list.add("элемент 5");
+        //Scanner sc = new Scanner(System.in);
+//        for (int i = 0; i < 5; i++) {
+//            list.add(sc.next());
+//        }
         System.out.println(list.size());
         for (String x : list)
             System.out.println(x);
