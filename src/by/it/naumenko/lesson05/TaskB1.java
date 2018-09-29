@@ -13,7 +13,7 @@ package by.it.naumenko.lesson05;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TaskB1 { 
+public class TaskB1 {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
         list.add("элемент 1");

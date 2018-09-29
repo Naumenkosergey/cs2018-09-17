@@ -7,15 +7,22 @@ public class Dog {
 
     private String name;
     private int age;
-    private int veigth;
-    private double power;
+    private int weight; //вес собаки
+    private double power; //сила укуса собаки
 
-    public int getVeigth() {
-        return veigth;
+    public Dog(String name, int age, int weight, double power) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.power = power;
     }
 
-    public void setVeigth(int veigth) {
-        this.veigth = veigth;
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     public double getPower() {
@@ -31,12 +38,6 @@ public class Dog {
         this.age = age;
     }
 
-    public Dog(String name, int age, int veigth, double power) {
-        this.name = name;
-        this.age = age;
-        this.veigth = veigth;
-        this.power = power;
-    }
 
     public String getName() {
         return name;
@@ -59,10 +60,11 @@ public class Dog {
         return "Кличка: " + this.name + ". Возраст: " + this.age;
     }
 
-    public boolean win(Dog otherDog) {
-        double myshans = 0.2 * this.age + 0.3 * this.veigth + 0.5 * this.power;
-        double othShans = 0.2 * otherDog.age + 0.3 * otherDog.veigth + 0.5 * otherDog.power;
-        return myshans>othShans;
+    boolean win(Dog otherDog) {
+        double myChans = 0.2 * this.age + 0.3 * this.weight + 0.5 * this.power;
+        double otherChans = 0.2 * otherDog.age + 0.3 * otherDog.weight + 0.5 * otherDog.power;
+        return myChans>otherChans;
     }
+
 }
 
